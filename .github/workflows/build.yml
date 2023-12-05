@@ -17,4 +17,5 @@ jobs:
         cd pwnify
         make
     - name: Build
+      working-directory: ${{ github.workspace }}
       run: make arch=arm64
