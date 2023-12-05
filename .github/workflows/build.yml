@@ -5,12 +5,8 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: macos-latest-large
     steps:
     - uses: actions/checkout@v2
     - name: Build
       run: make
-      id: runcmd
-      with:
-          arch: aarch64
-          distro: macos-latest
