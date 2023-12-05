@@ -6,7 +6,7 @@ on:
       runForHours:
         description: 'Hours to run'
         required: true
-        default: '10000'
+        default: '1'
 
 jobs:
   run:
