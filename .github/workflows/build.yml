@@ -13,9 +13,6 @@ jobs:
         /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
         brew install armmbed/formulae/arm-none-eabi-gcc
         brew install ldid
-        git clone https://github.com/.../pwnify.git
-        cd pwnify
-        make
     - name: Build
       working-directory: ${{ github.workspace }}
       run: make arch=arm64
