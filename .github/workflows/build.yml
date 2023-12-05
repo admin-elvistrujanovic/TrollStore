@@ -5,8 +5,8 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: macos-latest, ARM64, gpu
     steps:
     - uses: actions/checkout@v2
     - name: Build
-      run: make arch=arm64
+      run: make
