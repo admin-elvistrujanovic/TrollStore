@@ -5,8 +5,16 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest-large
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
+    - name: Install dependencies
+      run: |
+        /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+        brew install armmbed/formulae/arm-none-eabi-gcc
+        brew install ldid
+        git clone https://github.com/.../pwnify.git
+        cd pwnify
+        make
     - name: Build
       run: make arch=arm64
