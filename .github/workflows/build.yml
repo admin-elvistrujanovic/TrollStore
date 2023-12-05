@@ -5,8 +5,10 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest, ARM64, gpu
+    runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
     - name: Build
       run: make
+      with:
+          arch: aarch64
